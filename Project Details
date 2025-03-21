@@ -1,0 +1,40 @@
+DRIVER DROWSINESS DETECTION
+It is a difficult problem to make drivers drowsiness detection meet the needs of real time in embedded system; meanwhile, there are still some unsolved problems like drivers’ head tilted and size of eye image not large enough. 
+This project proposes an efficient method to solve these problems for eye state identification of drivers’ drowsiness detection in embedded system which based on image processing techniques. 
+This method break traditional way of drowsiness detection to make it real time, it utilizes face detection and eye detection to initialize the location of driver’s eyes; after that an object tracking method is used to keep track of the eyes; 
+Finally, we can identify drowsiness state of driver with EAR by identified eye state. Experiment results show that it makes good agreement with analysis.
+
+OVERVIEW:
+•	Initialize text-to-speech: Uses pyttsx3 for verbal alerts. 
+•	Define eye aspect ratio (EAR): Computes EAR to detect blinking or eye closure
+•	Argument Parsing: Accepts the path to the shape predictor model.
+•	Constants for Drowsiness Detection: Sets thresholds for EAR and consecutive frames.
+•	Dlib's Face Detector: Initializes the HOG-based detector and shape predictor.
+•	Facial Landmarks for Eyes: Identifies eye regions for EAR computation.
+•	Video Stream Initialization: Captures video from the webcam.
+•	Main Loop: Processes each frame to detect faces, compute EAR, and trigger alarms.
+•	Threshold value : 0.2(EAR Value).
+
+
+MODULES USED
+1.	Dlib:
+•	Used for face detection and facial landmark localization.
+2.	cv2 (OpenCV):
+•	Utilized for image processing tasks, including frame resizing, color conversion, and contour drawing.
+•	Facilitates access to the webcam and video stream processing.
+3.Imutils :
+•	Offers convenience functions for resizing frames and working with video streams.
+4.Arg parse :
+•	Provides a simple way to parse command-line arguments, allowing users to specify the path to the facial landmark predictor model.
+5.Scipy . spatial .distance :
+•	Used to compute Euclidean distances between pairs of points, particularly for calculating the Eye Aspect Ratio (EAR).
+6.pyttsx3:
+•	Enables text-to-speech functionality for generating audio alerts.
+
+
+TOOLS AND TECHNOLOGIES USED :
+•	Programming Language : Python
+•	Libraries used: OpenCV , Arg parse , pyttsx3 ,imutils.
+•	Dataset : Dlib Dataset
+•	Development Environment: Python IDE (Pycharm)
+
